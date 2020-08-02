@@ -22,13 +22,26 @@ justify-content: center;
 align-items: center;
 } 
 
-/* #questioncontainer {
-    background-color: deepskyblue; 
-    padding: 20px;
-    margin-left: 400px;
-    margin-right: 400px;
-}  */
+#questioncontainer {
+    padding-top: 60px;
+   
+}  
 
+
+
+#questions {
+padding: 0;
+margin: 0;
+display: flex;
+padding: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: darkred;
+font-weight: bolder;
+font-size: 20px;
+    
+}
 
 .button1,
 .button2,
@@ -48,4 +61,3 @@ background-color: gray;
 .hide {
     display: none;
 }
-

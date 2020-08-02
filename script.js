@@ -41,43 +41,57 @@
 
  
 
+
   //Begin Quiz
 
-     var startbutton = document.querySelector("#start")
-     var answerEl = document.querySelector("#questioncontainer")
+  var startbutton = document.querySelector("#start");
+  var answerEl = document.querySelector("#questioncontainer");
+  var heading = document.querySelector("#intro");
 
-     startbutton.addEventListener("click",beginQuiz)
+//Insert Questions
+ var questionEl = document.querySelector("#questions");
+ var buttonEl = document.querySelector(".buttons");
 
-     function beginQuiz() {
-      var startbutton = document.querySelector("#start")
-        console.log("Begin")
-        startbutton.classList.add("hide")
-        answerEl.classList.remove("hide")
-           }
-          
+ let randomQ, questionStart;
 
+  startbutton.addEventListener("click",beginQuiz);
 
-
-  //Question Set
-
-  // var questions = [
-  //   {
-  //     question: " Who would win in a fight between Batman and Superman?"
-  //   }
-  // ]
-
+  function beginQuiz() {
+     heading.classList.add("hide")
+     startbutton.classList.add("hide")
+     randomQ = questions.sort(() => Math.random() - .5)
+     questionStart = 0
+     answerEl.classList.remove("hide")
+     questionNext()
+        }
+       
 
 
+//functions to run questions
 
+function questionNext() {
+ runQuestions(randomQ[questionStart])
+}
+       
+function runQuestions(question){
+       questionEl.innerText = question.question
+       
+}
 
+//Funtions to answer questions
 
+//Question Sets
 
+let questions = [
+ {
+  question: "Hello?",
+  answer: [
+    {text: "Batman", correct: true},
+    {text: "Superman", correct: false}
+  ]
+ }
+]
 
-  // var questionEl = document.getElementById("question-container");
-
-  // function qOrder(){
-
-  // }
 
 
 
