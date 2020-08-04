@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +10,59 @@
 </head>
 <body>  
 
+  <!-- Start Quiz -->
+  <div class = "afterClick">
+  <div class = "home-box custom-box">
     <h1 id="intro"></h1>
-    <div id="start"></div>
-   
-    <!-- <div id="questions">Q</div> -->
-   
-
-    <div id="questioncontainer" class="hide">
-      <div id="questions">Q</div>
-
-
-        <div id="answercontainer" class = "buttons">
-        <div class="btn button1"></div>
-        <div class="btn button2"></div>
-        <div class="btn button3"></div>
-        <div class="btn button4"></div>
-      </div>
-    </div>
     
-        
+    
+      <button type="button" class="btn start" onclick="startQuiz()">Start</button>
+  
+  </div>
+</div>
+   
+    <div class = "beforeClick hide">
+    <div class="question-container custom-box">
+      <div class = "question-no">
+      
+      </div>
+      <div class = "question-text">
+   
+      </div>
+      <div class="choice-container">
+         
+      </div>
+    
+
+      <div class="next-btn">
+          <button type="button" class="btn" onclick="next()">Next</button>
+      </div>
+
+    <div class="answers">
+    
+    </div>
+   </div>
+   
+   
+    <div class="results custom-box beforeClick hide">
+      <h2>Your Results</h2>
+      <table>
+        <tr>
+          <td>Correct</td>
+          <td><span class=total-correct>5</span></td>
+        </tr>
+        <tr>
+          <td>Score</td>
+          <td><span class=total-score>5</span></td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td><span class=total-percentage>100</span></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
 
     <script src="script.js"></script>
 </body>

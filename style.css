@@ -1,63 +1,98 @@
 
-h1 {
-    margin-top: 100px;
-    text-align: center;
-    font-size: 30px;
-    color: darkred;
+
+
+body {
+    margin: 0;
+    background-color: green;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+.custom-box {
+    max-width: 700px;
+    background-color: darkturquoise;
+    margin: 40px auto;
+    padding: 30px;
 }
 
 #start {
-    margin-left: 50%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    text-align: center;
+    padding: 10px;
+    background-color: firebrick;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
-#answercontainer {
-padding: 0;
-margin: 0;
-display: flex;
-padding: 2rem;
-display: flex;
-justify-content: center;
-align-items: center;
-} 
-
-#questioncontainer {
-    padding-top: 60px;
-   
-}  
+.home-box {
+    text-align: center;
+}
 
 
 
-#questions {
-padding: 0;
-margin: 0;
-display: flex;
-padding: 2rem;
-display: flex;
-justify-content: center;
-align-items: center;
-color: darkred;
-font-weight: bolder;
-font-size: 20px;
+
+.question-container .question-no{
+    font-size: large;
+    font-weight: bold;
+    color: gold;
+    padding-bottom: 15px;
+}
+.question-container .question-text{
+    font-size: 25px;
+    font-weight: bolder;
+    color: indigo;
+    padding: 10px;
+
+}
+
+.question-container .choice-container {}
+.question-container .choice-container .choice{
+    background-color: #cccccc;
+    padding: 25px;
+    line-height: 22px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
     
 }
 
-.button1,
-.button2,
-.button3,
-.button4 {
-padding: 2rem;
-font-size: larger;
-font-weight: bolder;
-background-color: gray;
-} 
+.question-container .btn {
+    margin: 15px;
+    font-size: 20px;
+}
+.question-container .answers{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 20%;
+    margin-right: 3px;
+    margin-top: 10px;
+}
 
-/* .btn {
-        display: none;
-}  */
-
+.results h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.results table{
+    width: 20%;
+    margin: 30px;
+    font-weight: bolder;
+}
 
 .hide {
     display: none;
 }
+
+
+
