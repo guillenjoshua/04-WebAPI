@@ -1,7 +1,6 @@
 
 
 
-
 //Questions
 
 var questions = [
@@ -33,26 +32,18 @@ answer:2
   q: "Who was the first man on the moon?",
 choices:["Aldrin", "Armstrong", "Putin", "Trump"],
 answer:2
-},
+}
 ]
-
-
-
-
-
 
 
 
  //Button to Start
 
 var heading=document.createElement("h2")
-heading.textContent = "Let us now begin the Quiz!"
+heading.textContent = "Click start to begin the Quiz!"
 document.getElementById("intro").appendChild(heading)
 
-// Start button
-//  var button=document.createElement("button")
-//     button.textContent = "Start"
-//     document.querySelector("#start").appendChild(button)
+
 
 
 //Setup
@@ -75,7 +66,7 @@ var answersLeft = [];
 // start button remove
 
       function startQuiz() {
-         afterClick.classList.add("hide")
+        afterClick.classList.add("hide")
         beforeClick.classList.remove("hide")
         inputQuestions();
      }
@@ -88,7 +79,7 @@ var answersLeft = [];
 //Setup for Questions - Send to HTML
 function inputQuestions(){
   var totalQuestions = questions.length;
-  for (var i = 0; i<totalQuestions; i++){
+  for (let i = 0; i<totalQuestions; i++){
     questionsLeft.push(questions[i])
   }
 }
@@ -108,7 +99,7 @@ questionsLeft.splice(index1,1);
   
   var optionsLength = currentQuestion.choices.length
 
-  for (var i = 0; i<optionsLength; i++ ){
+  for (let i = 0; i<optionsLength; i++ ){
       answersLeft.push(i)
   }
 
@@ -117,21 +108,21 @@ questionsLeft.splice(index1,1);
 
 
 //Send Answers to HTML
-  for (var i = 0; i<optionsLength; i++ ){
+  for (let i = 0; i<optionsLength; i++ ){
 
       var answerIndex = answersLeft[Math.floor(Math.random()*answersLeft.length)];
       
       var index2 = answersLeft.indexOf(answerIndex);
       answersLeft.splice(index2,1);
   
-    var option = document.createElement("div");
-    option.innerHTML = currentQuestion.choices[answerIndex];
-    option.id = i;
-    option.className = "choice";
-    choiceContainer.appendChild(option)
+    var choice = document.createElement("div");
+    choice.innerHTML = currentQuestion.choices[answerIndex];
+    choice.id = i;
+    choice.className = "choice";
+    choiceContainer.appendChild(choice)
 
     //Correct Answer Choice
-    option.setAttribute("onclick", "getResult(this)");
+    // option.setAttribute("onclick", "getResult(this)");
 
     
   }
@@ -151,10 +142,10 @@ function resultsNew (element){
 
 }
 
-//End of Quiz Function
+// Next Function to End
 function next(){
     if(questionCounter === questions.length){
-      console.log("Quiz Over")
+      console.log("Game Over")
     } else {
       nextQuestion();
     }
